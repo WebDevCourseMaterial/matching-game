@@ -1,10 +1,10 @@
-enum CardState {
+export enum CardState {
   Hidden,
   Shown,
   Removed
 }
 
-enum GameState {
+export enum GameState {
   WaitingForFirstSelection,
   WaitingForSecondSelection,
   TurnComplete,
@@ -54,11 +54,13 @@ function shuffle(array) {
 }
 
 
-class MatchingGame {
+export class MatchingGame {
 
   // This array will be shuffled when the game begins and will contain a string that represents an
   // index to the image filename that is hidden under every card.  For example 4a, 8b, 0a, 4b, etc...
-  private cardIndices : string[];
+  public cardIndices : string[];
+  // TODO: Make above private again.
+
 
   // An array that is the same length as the cardIndices that tracks the state of each card.
   public cardStates : CardState[];
@@ -195,60 +197,3 @@ class MatchingGame {
     }
   }
 }
-
-//
-//// ------------------------------------------------
-////  Completely optional test code if you choose to
-////  use a Playground to develop the model object.
-//// ------------------------------------------------
-//
-//// Real game to see random values
-//var game = MatchingGame(numPairs: 10)
-//game.cards
-//game.cards[0]
-//game.cardStates
-//game.cardStates[0].rawValue
-//game.cardBack
-//game.gameState.simpleDescription()
-//game.description
-//
-//// Playing with non-random cards
-//game.cards = Array("01234567890123456789")
-//
-//// Making a match
-//game.cards[2]
-//game.cards[12]
-//game.cardStates[2].rawValue
-//game.cardStates[12].rawValue
-//game.gameState.simpleDescription()
-//game.pressedCard(atIndex: 2)
-//game.cardStates[2].rawValue
-//game.cardStates[12].rawValue
-//game.gameState.simpleDescription()
-//game.pressedCard(atIndex: 12)
-//game.cardStates[2].rawValue
-//game.cardStates[12].rawValue
-//game.gameState.simpleDescription()
-//game.startNewTurn()
-//game.cardStates[2].rawValue
-//game.cardStates[12].rawValue
-//game.gameState.simpleDescription()
-//
-//// Non-match
-//game.cards[1]
-//game.cards[15]
-//game.cardStates[1].rawValue
-//game.cardStates[15].rawValue
-//game.gameState.simpleDescription()
-//game.pressedCard(atIndex: 1)
-//game.cardStates[1].rawValue
-//game.cardStates[15].rawValue
-//game.gameState.simpleDescription()
-//game.pressedCard(atIndex: 15)
-//game.cardStates[1].rawValue
-//game.cardStates[15].rawValue
-//game.gameState.simpleDescription()
-//game.startNewTurn()
-//game.cardStates[1].rawValue
-//game.cardStates[15].rawValue
-//game.gameState.simpleDescription()
