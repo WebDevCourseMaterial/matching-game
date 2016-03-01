@@ -31,35 +31,43 @@ export class AppComponent {
     console.log("Make a match between 2 and 12...");
     console.log("State at 2 = " + CardState[game.cardStates[2]]);
     console.log("State at 12 = " + CardState[game.cardStates[12]]);
+    console.log("Game state = " + GameState[game.gameState]);
     console.log("Press 2");
     game.pressedCard(2);
     console.log("State at 2 = " + CardState[game.cardStates[2]]);
     console.log("State at 12 = " + CardState[game.cardStates[12]]);
+    console.log("Game state = " + GameState[game.gameState]);
     console.log("Press 12");
     game.pressedCard(12);
     console.log("State at 2 = " + CardState[game.cardStates[2]]);
     console.log("State at 12 = " + CardState[game.cardStates[12]]);
+    console.log("Game state = " + GameState[game.gameState]);
     console.log("Next turn called");
     game.startNewTurn();
     console.log("State at 2 = " + CardState[game.cardStates[2]]);
     console.log("State at 12 = " + CardState[game.cardStates[12]]);
+    console.log("Game state = " + GameState[game.gameState]);
 
     // Non-match
     console.log(game.toString());
     console.log("Make a non-match between 1 and 15...");
     console.log("State at 1 = " + CardState[game.cardStates[1]]);
     console.log("State at 15 = " + CardState[game.cardStates[15]]);
+    console.log("Game state = " + GameState[game.gameState]);
     console.log("Press 1");
     game.pressedCard(1);
     console.log("State at 1 = " + CardState[game.cardStates[1]]);
     console.log("State at 15 = " + CardState[game.cardStates[15]]);
+    console.log("Game state = " + GameState[game.gameState]);
     console.log("Press 15");
     game.pressedCard(15);
     console.log("State at 1 = " + CardState[game.cardStates[1]]);
     console.log("State at 15 = " + CardState[game.cardStates[15]]);
+    console.log("Game state = " + GameState[game.gameState]);
     console.log("Next turn called");
     game.startNewTurn();
     console.log("State at 1 = " + CardState[game.cardStates[1]]);
     console.log("State at 15 = " + CardState[game.cardStates[15]]);
+    console.log("Game state = " + GameState[game.gameState]);
   }
 }
